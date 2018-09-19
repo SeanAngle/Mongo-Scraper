@@ -40,8 +40,8 @@ app.engine(
   app.set("view engine", "handlebars");
 
 // Routes
-require("./Routes/apiRoutes")(app);
-require("./Routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 
     // we're connected to the database
