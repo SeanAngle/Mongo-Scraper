@@ -4,23 +4,20 @@ var cheerio = require("cheerio");
 
 module.exports = function (app) {
     app.get("/scrape", function(req, res) {
-        request("https://www.cnn.com/", function (error, response, html) {
+        request("https://news.google.com/", function (error, response, html) {
             if(error){
                 console.log(error);
                 return res.json(error);
             }
             var $ = cheerio.load(html);
-            $("article").each(function(i, element) {
+            $("article a").each(function(i, element) {
                 // Save an empty result object
                 var result = {};
 
                 // Add the text and href of every link, and save them as properties of the result object
                 result.title = $(element)
-                  .children("h2")
                   .text();
-                result.link = $(element)
-                  .children("h2")
-                  .children("a")
+                result.link = "https://news.google.com" + $(element)
                   .attr("href");
 
                   console.log("results: " + JSON.stringify(result));
