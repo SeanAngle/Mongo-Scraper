@@ -3,14 +3,12 @@
         <h1 class="display-4">Mongoose News Scraper!</h1>
         <p class="lead">This app will scrape news articles and display them below!</p>
         <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="/saved" role="button">Saved Articles</a>
-        <a class="btn btn-primary btn-lg" role="button" id="scrapeButton">Scrape Articles</a>
+        <a class="btn btn-primary btn-lg" href="/" role="button" id="allButton">All Articles</a>
     </div>
     {{#each article}}
     <div>
-        <h3>{{this.title}}</h3>
-        <a href="{{this.link}}">See Article Here</a>
-        <button class="saveButton" data-id="{{this.id}}">Save Article</button>
+        <h3>{{this.headline}}</h3>
+        <button class="removeButton" data-id="{{this.id}}">Remove Article</button>
         <button class="commentButton" data-id="{{this.id}}">Comment</button>
     </div>
     {{/each}}
