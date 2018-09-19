@@ -1,7 +1,6 @@
 // Dependencies
 var express = require("express");
 var exphbs = require("express-handlebars");
-// var mongojs = require("mongojs");
 
 // Require request and cheerio. This makes the scraping possible
 var request = require("request");
@@ -18,9 +17,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/articles
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {userNewUrlParser: true});
 var db = require('./models');
-// mongoose.on('error', console.error.bind(console, 'connection error:'));
-
-
 
 // Initialize Express
 var app = express();
