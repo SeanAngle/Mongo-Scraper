@@ -7,9 +7,10 @@
     </div>
     {{#each article}}
     <div>
-        <h3>{{this.headline}}</h3>
-        <button class="removeButton" data-id="{{this.id}}">Remove Article</button>
-        <button class="commentButton" data-id="{{this.id}}">Comment</button>
+        <h3>{{this.title}}</h3>
+        <a href="{{this.link}}">See Article Here</a>
+        <button class="removeButton" data-id="{{this._id}}">Remove Article</button>
+        <button class="commentButton" data-id="{{this._id}}">Comment</button>
     </div>
     {{/each}}
 </div>
