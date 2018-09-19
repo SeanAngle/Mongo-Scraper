@@ -1,0 +1,15 @@
+{{#each Article}}
+    <h3>{{this.title}}</h3>
+    <a href="{{this.link}}">See Article Here</a>
+{{/each}}
+
+<input id="comment" type="text" placeholder="Comment Here">
+
+{{#each comment}}
+<div>
+    <p>{{this.body}}</p>
+    <button class="deleteButton" data-id="{{this._id}}">Delete Comment</button>
+</div>
+{{/each}}
+
+<script type="text/javascript" src="./js/comments.js"></script>
