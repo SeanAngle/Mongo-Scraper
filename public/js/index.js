@@ -7,7 +7,7 @@ $(document).on("click", "#scrapeButton", function(event){
     })
 })
 
-$(document).on("click", "#saveButton", function(event){
+$(document).on("click", ".saveButton", function(event){
     event.preventDefault();
     var thisId = $(this).attr("data-id");
     $.ajax({
@@ -18,7 +18,7 @@ $(document).on("click", "#saveButton", function(event){
     })
 })
 
-$(document).on("click", "#commentButton", function(event) {
+$(document).on("click", ".commentButton", function(event) {
     event.preventDefault();
     var thisId = $(this).attr("data-id");
     $.ajax({
@@ -29,7 +29,7 @@ $(document).on("click", "#commentButton", function(event) {
     })
 })
 
-$(document).on("click", "#removeButton", function(event) {
+$(document).on("click", ".removeButton", function(event) {
     event.preventDefault();
     var thisId = $(this).attr("data-id");
     $.ajax({

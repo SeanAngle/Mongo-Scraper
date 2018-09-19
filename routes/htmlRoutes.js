@@ -30,4 +30,10 @@ module.exports = function (app) {
             }
         })
     });
+
+    app.get("/comment/:id", function(req, res) {
+        db.Article.find({id: req.params.id}, function(err, data) {
+
+        })
+    })
 };
